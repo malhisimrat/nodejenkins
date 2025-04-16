@@ -30,7 +30,12 @@ pipeline {
                 bat 'npm test'
             }
         }
-
+        stage('Run Index Script') {
+            steps {
+                echo 'Npm start initiated'
+                bat 'npm start'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building the application...'
