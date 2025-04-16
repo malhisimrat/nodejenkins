@@ -33,7 +33,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building the application...'
+                echo 'Building application...'
                 // Uncomment if you have a build script
                 // sh 'npm run build'
             }
