@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deployment stage (add your deploy steps here)...'
-                // sh './scripts/deploy.sh'
+                sh 'npm start'
             }
         }
     }
