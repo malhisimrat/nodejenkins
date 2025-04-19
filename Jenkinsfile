@@ -6,7 +6,7 @@ pipeline {
     }
 
     tools {
-        nodejs '23.11.0' // Must match the name configured in Jenkins
+        nodejs '23.11.0'
     }
 
     stages {
@@ -20,21 +20,20 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo 'Installing dependencies using Node.js 23.11.0...'
-                bat 'npm install'
+                sh 'npm install'
             }
         }
 
         stage('Run Tests') {
             steps {
                 echo 'Running tests...'
-                bat 'npm test'
+                sh 'npm test'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building application...'
-                // Uncomment if you have a build script
                 // sh 'npm run build'
             }
         }
@@ -42,7 +41,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deployment stage (add your deploy steps here)...'
-                // sh './scripts/deploy.sh' or similar
+                // sh './scripts/deploy.sh'
             }
         }
     }
