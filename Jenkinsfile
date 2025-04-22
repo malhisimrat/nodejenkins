@@ -6,7 +6,7 @@ pipeline {
     }
 
     tools {
-        nodejs 'nodegit'
+        nodejs '23.11.0'
     }
 
     stages {
