@@ -34,7 +34,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building application...'
-                // sh 'npm run build'
+                bat 'npm run build'
             }
         }
 
