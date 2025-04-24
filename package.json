@@ -5,6 +5,7 @@
   "main": "start",
   "scripts": {
     "start": "node index.js",
+    "build": "echo  \"No tests available\"",
     "test": "echo \"No tests available\""
   },
   "author": "",
