@@ -33,7 +33,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building application...'
+                echo 'Building application with webhook...'
                 bat 'npm run build'
             }
         }
@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deployment stage (add your deploy steps here)...'
-                bat 'pm2 restart 0'
+                bat 'npm start'
             }
         }
     }
