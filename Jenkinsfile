@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deployment stage (add your deploy steps here)...'
-                bat 'npm start'
+                bat 'pm2 restart 0'
             }
         }
     }
