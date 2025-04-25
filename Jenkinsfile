@@ -33,7 +33,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building application with webhook...'
+                echo 'Building application with webhook....'
                 bat 'npm run build'
             }
         }
