@@ -20,21 +20,21 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo 'Installing dependencies using Node.js 23.11.0...'
-                bat 'npm install'
+                sh 'npm install'
             }
         }
 
         stage('Run Tests') {
             steps {
                 echo 'Running tests...'
-                bat 'npm test'
+                sh 'npm test'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building application with webhook....'
-                bat 'npm run build'
+                sh 'npm run build'
             }
         }
 
