@@ -4,7 +4,9 @@ pipeline {
     environment {
         NODE_ENV = 'development'
     }
-
+    triggers{
+        githubPush()
+    }
     tools {
         nodejs '23.11.0'
     }
@@ -24,24 +26,10 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                echo 'Running tests...'
-                sh 'npm test'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Building application with webhook....'
-                sh 'npm run build'
-            }
-        }
-
         stage('Deploy') {
             steps {
                 echo 'Deployment stage (add your deploy steps here)...'
-                sh 'npm start'
+                sh 'pm2 restart 0'
             }
         }
     }
