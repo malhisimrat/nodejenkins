@@ -4,9 +4,7 @@ pipeline {
     environment {
         NODE_ENV = 'development'
     }
-    triggers{
-        githubPush()
-    }
+    
     tools {
         nodejs '23.11.0'
     }
