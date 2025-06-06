@@ -12,7 +12,7 @@ app.use(express.static(__dirname + '/server/public/'));
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: false, parameterLimit: 500000000 }));
 app.get('/', (req, res) => {
-    res.send('<h1> KITNE AADMI THE, huhuhuhuhuhuhhahahahahahahha. MAZA a REHA ha</h1> ')
+    res.send('<h1> KITNE AADMI THE, huhuhuhahahahahha. MAZA a REHA ha</h1> ')
 })
 
 app.use('/api', apiRoutes)
