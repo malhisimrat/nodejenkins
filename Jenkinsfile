@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deployment stage (add your deploy steps here)...'
-                bat 'npm start'
+                bat 'npm run build'
             }
         }
     }
