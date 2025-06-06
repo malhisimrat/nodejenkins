@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deployment stage (add your deploy steps here)...'
-                sh 'pm2 restart 0'
+                sh 'npm start'
             }
         }
     }
