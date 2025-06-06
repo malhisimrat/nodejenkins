@@ -26,12 +26,12 @@ pipeline {
             }
         }
 
-        // stage('Deploy') {
-        //     steps {
-        //         echo 'Deployment stage (add your deploy steps here)...'
-        //         bat 'npm start'
-        //     }
-        // }
+        stage('Deploy') {
+            steps {
+                echo 'Deployment stage (add your deploy steps here)...'
+                bat 'npm run build'
+            }
+        }
     }
 
     post {
