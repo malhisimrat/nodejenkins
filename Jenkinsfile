@@ -26,6 +26,19 @@ pipeline {
             }
         }
 
+        stage('node check kro') {
+            steps {
+                echo 'Installing dependencies using Node.js 23.11.0...'
+                bat 'node --version'
+            }
+        }
+        stage('npm check kro') {
+            steps {
+                echo 'Installing dependencies using Node.js 23.11.0...'
+                bat 'npm --version'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 echo 'Deployment stage (add your deploy steps here)...'
