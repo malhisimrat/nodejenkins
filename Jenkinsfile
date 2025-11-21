@@ -8,9 +8,6 @@ pipeline {
     tools {
         nodejs 'nodemeriha'
     }
-    triggers {
-        pollSCM('H/2 * * * *') // Check every 5 minutes for changes
-    }
     stages {
         stage('Checkout Repository') {
             steps {
